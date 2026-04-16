@@ -1,2 +1,0 @@
-test update
-testawrtgit add .
