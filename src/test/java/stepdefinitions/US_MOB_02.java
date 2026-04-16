@@ -1,6 +1,7 @@
 package stepdefinitions;
 
 import io.appium.java_client.AppiumBy;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -32,16 +33,17 @@ public class US_MOB_02 {
                     AppiumBy.accessibilityId("1. Light Theme")
             ).click();
         }
+    @And("kullanici input alanina {string} yazar")
+    public void kullanici_input_alanina_yazar(String text) {
 
-        @When("kullanici input alanina {string} yazar")
-        public void kullanici_input_alanina_yazar(String text) {
+        WebElement input = Driver.driver.findElement(
+                AppiumBy.className("android.widget.EditText")
+        );
 
-            WebElement input = Driver.driver.findElement(
-                    AppiumBy.className("android.widget.EditText")
-            );
+        input.click();
+        input.sendKeys(text);
+    }
 
-            input.sendKeys(text);
-        }
 
         @When("kullanici checkbox secer")
         public void kullanici_checkbox_secer() {

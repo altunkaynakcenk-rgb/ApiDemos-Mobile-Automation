@@ -1,11 +1,12 @@
-Feature: Form Interaction
+Feature: Placeholder Test (Temp)
 
-  Scenario: Kullanici form elemanlari ile etkilesim kurar
+  Scenario: Input alaninda placeholder ve yazi testi
 
     Given kullanici uygulamayi acar
     When kullanici Views menusune gider
     And kullanici Controls menusune gider
     And kullanici Light Theme ekranini acar
+
+    Then kullanici placeholder oldugunu gorur
     And kullanici input alanina "Test123" yazar
-    And kullanici checkbox secer
-    Then checkbox secili olmalidir
+    Then kullanici yazdigi degeri dogrular

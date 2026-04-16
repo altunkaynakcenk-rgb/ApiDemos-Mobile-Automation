@@ -2,6 +2,8 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+src/test/temp/
+src/test/java/temp/
 
 ### IntelliJ IDEA ###
 .idea/
